@@ -1,3 +1,6 @@
+# expmple web app
+#run with: python -m waitress --listen=*:8000 notes:app       
+
 from core.api import API
 import json
 
@@ -39,3 +42,4 @@ def get_todo(request, response, id):
     else:
         response.content_type = 'application/json'
         response.text = json.dumps(todo)
+
